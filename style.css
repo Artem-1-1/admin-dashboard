@@ -4,3 +4,7 @@
     --white-color: #ffffff;
     --bright-orange-color: #f0b429;
 }
+
+img {
+    height: 2rem;
+}
