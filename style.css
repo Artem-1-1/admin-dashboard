@@ -41,6 +41,11 @@ img {
   width: 3rem;
 }
 
+#sidebar-head-icon,
+li > img {
+  filter: invert(100%);
+}
+
 #nav ul {
   margin-bottom: 5rem;
 }
@@ -61,22 +66,26 @@ ul li {
 #header {
   grid-column: 2 / 3;
   grid-row: 1;
-  height: 300px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  padding-left: 25px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 10px 20px;
+  padding: 15px 40px;
+  align-items: center;
 }
 
 #search {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 #search > input {
     height: 2rem;
     width: 70%;
-    border-radius: 15px;
+    border-radius: 20px;
     border: none;
     background-color: var(--pastel-blue-color);
 }
@@ -84,19 +93,40 @@ ul li {
 #notifications {
   display: flex;
   align-items: center;
-  justify-content: end;
-  gap: 25px;
+  justify-content: start;
+  gap: 15px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#notifications h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 #notifications img:last-of-type {
-  width: 50px;
-  height: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
 }
 
+#greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
 #greeting img {
-  height: 100px;
-  width: 100px;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
 }
 
@@ -104,12 +134,14 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 20px;
+  gap: 15px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 #buttons button {
-  padding: 10px 30px;
-  border-radius: 20px;
+  padding: 15px 35px;
+  border-radius: 25px;
   background-color: var(--blue-color);
   border: none;
   color: var(--white-color);
@@ -159,6 +191,16 @@ ul li {
   grid-row: 1;
   padding-left: 25px;
 } 
+
+#one {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#three {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
 
 .announcements-line {
   background-color: var(--white-color);
